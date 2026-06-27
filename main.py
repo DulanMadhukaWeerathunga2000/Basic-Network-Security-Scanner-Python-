@@ -1,29 +1,29 @@
-from sys import stdout
-import subprocess
-from platform import platform
-import platform
-import subprocess
-import ipaddress
+from host_discovery import discover_hosts
+from port_scanner import scan_ports
+from vulnerability import check
 
-def ping_host(ip):
-    param = "-n" if platform.system().lower() == "windows" else "-c"
+print("="*50)
+print("Enterprise Network Security Scanner")
+print("="*50)
 
-    result = subprocess.run(
-        
-        ["ping",param,"1",str(ip)],
-        stdout=subprocess.DEVNULL
-        
-    )
+network=input("Enter Network (Example 192.168.1.0/24): ")
 
-    return result.returncode == 0
-def discover_hosts(network):
-    active_hosts = []
+hosts=discover_hosts(network)
 
-    for ip in ipaddress.ip_network(network, strict=False).hosts():
-        if ping_host(ip):
-            active_hosts.append(str(ip))
+print("\nActive Hosts\n")
 
-    return active_hosts
+for host in hosts:
 
+    print(host)
 
-    
+    ports=scan_ports(host)
+
+    print("Open Ports :",ports)
+
+    print("Risk")
+
+    for item in check(ports):
+
+        print(item)
+
+    print("-"*40)
