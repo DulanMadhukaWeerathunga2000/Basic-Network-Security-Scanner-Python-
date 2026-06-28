@@ -35,19 +35,19 @@ A professional, multi-threaded network security scanner for enterprise environme
 
 ```
 Enterprise-Network-Security-Scanner/
-├── main.py              # Entry point
-├── scanner.py           # Core scanner class
-├── config.py            # Configuration management
-├── host_discovery.py    # ICMP host discovery
-├── port_scanner.py      # Multi-threaded port scanner
-├── vulnerability.py     # Vulnerability detection
-├── report.py            # Report generation (CSV/HTML)
-├── utils.py             # Utility functions
-├── requirements.txt     # Python dependencies
-├── README.md           # Documentation
-├── LICENSE             # MIT License
-├── reports/            # Generated reports directory
-└── screenshots/        # Screenshot templates
+├── main.py # Entry point
+├── scanner.py # Core scanner class
+├── config.py # Configuration management
+├── host_discovery.py # ICMP host discovery
+├── port_scanner.py # Multi-threaded port scanner
+├── vulnerability.py # Vulnerability detection
+├── report.py # Report generation (CSV/HTML)
+├── utils.py # Utility functions
+├── requirements.txt # Python dependencies
+├── README.md # Documentation
+├── LICENSE # MIT License
+├── reports/ # Generated reports directory
+└── screenshots/ # Screenshot templates
 ```
 
 ## 🚀 Quick Start
