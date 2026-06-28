@@ -1,0 +1,4 @@
+Host,Open Ports,Services,Vulnerabilities,Severity
+192.168.1.1,"53, 80, 443",,No vulnerabilities found,LOW
+192.168.1.133,,,No vulnerabilities found,LOW
+192.168.1.158,"135, 139, 445",,No vulnerabilities found,LOW
